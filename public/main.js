@@ -1,10 +1,12 @@
-async function init() {
+const init = async () => {
     
-    let rustApp = null
+    let rustApp = null;
+
     try {
-        rustApp = await import('../pkg')
-    } catch (e) {
-        console.error(e)
+        rustApp = await import('../pkg');
+    }
+    catch(err) {
+        console.error(err);
         return;
     }
 
